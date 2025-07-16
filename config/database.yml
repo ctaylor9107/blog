@@ -81,8 +81,8 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: blog_production
-    username: blog
+    database: my_blog_database_23ue
+    username: my_blog_database_23ue_user
     password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
