@@ -83,6 +83,7 @@ production:
     <<: *default
     database: my_blog_database_23ue
     username: my_blog_database_23ue_user
+    url: <%= ENV["DATABASE_URL"] %>
     password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
