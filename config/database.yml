@@ -24,11 +24,11 @@ test:
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
-  Primary:
-  <<: *default
-  database: my_blog_database_23ue
-  username: my_blog_database_23ue_user
-  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
+  primary: &primary_production
+    <<: *default
+    database: blog_production
+    username: blog
+    password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
   cache:
     <<: *default
     database: storage/production_cache.sqlite3
