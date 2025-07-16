@@ -24,15 +24,11 @@ test:
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
-  primary:
-    <<: *default
-<<<<<<< HEAD
-    database: my_blog_database_23ue
-    username: my_blog_database_23ue_user
-    password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
-=======
-    database: storage/production.sqlite3
->>>>>>> parent of 6822398 (Update to use pg instead of SQLite for db)
+  Primary:
+  <<: *default
+  database: my_blog_database_23ue
+  username: my_blog_database_23ue_user
+  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
   cache:
     <<: *default
     database: storage/production_cache.sqlite3
